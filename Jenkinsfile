@@ -15,6 +15,7 @@ pipeline {
             }
             steps {
                 cleanWs()
+                checkout scm
                 sh '''
                     ls -la
                     node --version
