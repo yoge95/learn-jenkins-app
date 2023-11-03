@@ -14,6 +14,11 @@ pipeline {
                 }
             }
             steps {
+                sh '''
+                    ls -la
+                    node --version
+                    npm --version
+                '''
                 cleanWs()
                 checkout scm
                 sh '''
